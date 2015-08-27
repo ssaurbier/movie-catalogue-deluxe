@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <ul>
+      <h1><%= id%></h1>
+      <table>
+         <tr>
+           <th>genres</th>
+           <th>Studio</th>
+           <th>actor</th>
+           <th>character</th>
+         </tr>
+         <% film.each do |row| %>
+         <tr>
+           <td><%=row["genres"]%></td>
+           <td><%=row["studio"]%></td>
+           <td><a href='/actors/<%= row['actor'] %>'><%= row['actor'] %></a></td>
+           <td><%=row["character"]%></td>
+         </tr>
+        <% end %>
+      </table>
+    </ul>
+  </body>
+</html>
+
+
+
+<!-- This page should contain:
+1. Genre and Studio
+2. List of All Actors
+3. Each actor links to page. -->
+
+
+<!-- <h3 class='banner'><%= movie_name %></h3>
+ <h4 id='genre'><%= genre_studio[0]["genre"] + " - " + genre_studio[0]["studio"] %></h4>
+  <table>
+    <tr>
+      <th>Actor</th>
+      <th>Character</th>
+    </tr>
+  <% movie_details.each do |movie| %>
+  <tr>
+    <td><a href="/actors/<%= movie["actor"] %>"><%= movie["actor"] %></td>
+    <td><%= movie["character"] %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td><b><a href="/actors">Back to the Actors</a></b></td>
+    <td><b><a href="/movies">Back to the Movies</a></b></td>
+  </tr>
+</table> -->

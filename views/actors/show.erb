@@ -1,0 +1,22 @@
+<h3 class='banner'><%= actor_name %></h3>
+  <table>
+    <tr>
+      <th align="left">Movie</th>
+      <th align="left">Year</th>
+      <th align="left">Character</th>
+    </tr>
+  <% details.each do |movie| %>
+  <tr>
+    <td><a href="/movies/<%= movie["title"] %>"><%= movie["title"] %></td>
+    <td><%= movie["year"] %></td>
+    <td><%= movie["character"] %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td><b><a href="/actors">Back to the Actors</a></b></td>
+  </tr>
+</table>
+
+<!-- This page should contain a list of movies that the actor
+has starred in and what their role was.
+Each movie should link to the details page for that movie. -->
